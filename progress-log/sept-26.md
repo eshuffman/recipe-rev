@@ -17,3 +17,7 @@ Really, that's it. Think Paprika, but customized to fix the things that irk me. 
 Now, in spite of my three years of experience as a software engineer/professional bug hunter...I know next to nothing about many of these goals. So, I'll learn! And flail. And hopefully come out with something fun and useful in the end. An hour a day means I'll be building really slowly, but that's fine. It's a process.
 
 So, the next step for today: figure out what I want my backend to look like!
+
+Nope, that's not the next step. The next step is setting up an SSH key for my Github account so I can properly push changes. SSH stuff used to freak me the heck out, but wow Github. I followed [this tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and it was easy as pie. Back in business, baby.
+
+I decided to make my backend language Go, because, I don't know, why not add one new language to my skillset, right? Which meant I had to **install** Go, which took me to the end of my hour. But triumph! I did get to a point where I could enter the command `go version` into my terminal and actually get something back that's not an error. Tomorrow, I get to play around with it, and maybe even create my first API endpoint!
