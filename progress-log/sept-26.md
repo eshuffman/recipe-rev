@@ -21,3 +21,15 @@ So, the next step for today: figure out what I want my backend to look like!
 Nope, that's not the next step. The next step is setting up an SSH key for my Github account so I can properly push changes. SSH stuff used to freak me the heck out, but wow Github. I followed [this tutorial](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and it was easy as pie. Back in business, baby.
 
 I decided to make my backend language Go, because, I don't know, why not add one new language to my skillset, right? Which meant I had to **install** Go, which took me to the end of my hour. But triumph! I did get to a point where I could enter the command `go version` into my terminal and actually get something back that's not an error. Tomorrow, I get to play around with it, and maybe even create my first API endpoint!
+
+## Sept 1, 2026
+
+Today I only have about a half hour to work on the project. But any time is better than none! First order of business: installing Node. Easy peasy.
+
+Orrr so I think. Because when I go to create a new React project, I get `node: No such file or directory`. Whoops. I decide that it's probably because I didn't install Node in my frontend folder, so I try again, and then it's success. I give it the old npm start and there it is: the boilerplate React page with the spinny logo.
+
+The tutorial I'm following ([here](https://medium.com/@riley.anderssen/how-to-connect-a-react-frontend-to-a-go-backend-a-simple-guide-8e13d8e2aa2a)) has me put in some code just to create the connection between the Go backend and React/TS frontend, so before I mess around with creating my first API call, I fiddle with the React side of things. I've still got it, baby! I manage to get it to the point where I can enter text into an input area, push the button, and get that text to appear in the textarea beneath it. Very nice.
+
+After that I put aside my vanity (mostly) and finish hooking up the backend to the frontend by copying in the tutorial's main.go code. Do I know what it's doing? Not really, but's not exactly complex, and the author does explain a little bit: it appears we're creating a middleware function so CORS doesn't get angry, and then creating the howdyHandler function for the api/howdy endpoint.
+
+That's about all I have time for today, and that's as far as the tutorial goes anyway. (GOES. Hah. No put intended.) I need to learn more about Go -- like, what the heck does `:=` mean? So I'll look forward to diving into that more tomorrow, and maybe creating some sort of recipe input endpoint. Or something!
