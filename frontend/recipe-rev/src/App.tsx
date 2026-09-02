@@ -1,25 +1,35 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+//const dotenv = require('dotenv')
+//dotenv.config({ path: './.env'});
 
 function App() {
-  const [name, setName] = useState("");
+  const [recipeLink, setRecipeLink] = useState("");
   const [response, setResponse] = useState("");
+  const zylaAPIKey = process.env.ZYLA_API_KEY
 
-  const sendUsername = async () => {
-    const res = await fetch("http://localhost:8080/api/howdy", {
-      method: "POST",
+  const parseRecipe = async () => {
+    const config = {
+      method: "GET",
+      url: "https://zylalabs.com/api/1920/recipe+parser+api/1629/recipe+parser",
       headers: {
-        "Content-Type": "application/json",
+        "Authorization": zylaAPIKey
       },
-      body: JSON.stringify({ username: name }),
-    });
-
-    if (res.ok) {
-      const data = await res.json();
-      setResponse(data.message);
+      source: recipeLink,
     }
+    axios(config).then(function (res: any){
+      if (res.ok) {
+        console.log("WOOHOO!")
+        const data = JSON.stringify(res.data)
+        setResponse(data);
+      }
+    })
+    .catch(function(error: any){
+      console.log(error);
+    })
   };
+
   return (
     <div style={{ textAlign: 'center' }}>
       <div style={{ 
@@ -30,9 +40,9 @@ function App() {
         paddingTop: "150px",
         gap: '20px'
       }}>
-        <input placeholder='Your name...' onChange={(e) => setName(e.target.value)}/>
-        <button onClick={sendUsername}>That's It!</button>
-        <textarea id="nameInput" disabled style={{ height: "50px" }} value={response} />
+        <input placeholder='Recipe link' onChange={(e) => setRecipeLink(e.target.value)}/>
+        <button onClick={parseRecipe}>Break it down for me!</button>
+        <textarea id="recipeInput" disabled style={{ height: "50px" }} value={response} />
       </div>
     </div>
   );
