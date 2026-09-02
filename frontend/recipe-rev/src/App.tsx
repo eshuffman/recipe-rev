@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-var axios = require('axios')
+import axios from 'axios';
 require('dotenv').config();
 
 function App() {
