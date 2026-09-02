@@ -51,3 +51,9 @@ Luckily, like all other obstacles I've encountered up to this point, it isn't ac
 From there, it's a matter of figuring out how to call the endpoint properly in the code. Which I do, fairly handily, and then boot up my project. GIANT SCREAMY SCREEN OF ERRORS. Because nothing can be *so* easy, after all. Anyway, it turns out I needed to install axios instead of just screaming into the void for it.
 
 Still, there are several other errors that have to do with packagey stuff. I'm not sure what I could have possibly done to upset my project this much between yesterday and today. Oh, the fun of development, right?
+
+After some *very* simple playing-around, I discover that the issue is WITH MY DAMN CALL TO THE ENV FILE. 
+
+I can't fix it. I also can't fix the issue with calling the actual endpoint, which tells me that "source" is required AND I AM ADDING IT. If it would actually give me an example of a call, but noooooo.
+
+I am tired and grumpy and feel useless. I am giving up for the day. That is all.

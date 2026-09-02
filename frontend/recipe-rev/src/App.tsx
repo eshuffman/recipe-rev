@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
-require('dotenv').config();
+//const dotenv = require('dotenv')
+//dotenv.config({ path: './.env'});
 
 function App() {
   const [recipeLink, setRecipeLink] = useState("");
@@ -11,11 +12,11 @@ function App() {
   const parseRecipe = async () => {
     const config = {
       method: "GET",
-      url: "https://zylalabs.com/api/1920/recipe+parser+api/1629/recipe+parser?source=Required",
+      url: "https://zylalabs.com/api/1920/recipe+parser+api/1629/recipe+parser",
       headers: {
-        "Authorization": "Bearer" + zylaAPIKey
+        "Authorization": zylaAPIKey
       },
-      source: JSON.stringify(recipeLink),
+      source: recipeLink,
     }
     axios(config).then(function (res: any){
       if (res.ok) {
