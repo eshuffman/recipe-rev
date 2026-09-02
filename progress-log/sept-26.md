@@ -33,3 +33,19 @@ The tutorial I'm following ([here](https://medium.com/@riley.anderssen/how-to-co
 After that I put aside my vanity (mostly) and finish hooking up the backend to the frontend by copying in the tutorial's main.go code. Do I know what it's doing? Not really, but's not exactly complex, and the author does explain a little bit: it appears we're creating a middleware function so CORS doesn't get angry, and then creating the howdyHandler function for the api/howdy endpoint.
 
 That's about all I have time for today, and that's as far as the tutorial goes anyway. (GOES. Hah. No put intended.) I need to learn more about Go -- like, what the heck does `:=` mean? So I'll look forward to diving into that more tomorrow, and maybe creating some sort of recipe input endpoint. Or something!
+
+## Sept 2, 2026:
+
+Today I have two goals. First, I'd like to see if I can hook my frontend up to an external API, make a call, and get data of some sort. Second, I'd like to see if I can get some sort of database hooked up. PERSIST! THAT! DATA!
+
+I know how time works, so if I accomplish *one* of those goals today, I'll consider it time well spent.
+
+I do a small bit of research and find a recipe-parser API that costs about $20/month to access via API key. Thankfully there's a free seven-day trial period, so I sign up and get my API key, which is --
+
+**RECORD SCRATCH**
+
+I'm not giving you chuckleheads my API key! Which leads me to my next little bunny trail: I know it's a huge no-no to push an API key up to Github. Which means I need to store it in an env variable. Which means I need to *figure out* how to store it in an env variable.
+
+Luckily, like all other obstacles I've encountered up to this point, it isn't actually super difficult. Literally just a matter of creating a .env file in my root directory, adding the API key as a named variable, creating a .gitignore file and adding .env to it, and then making a little reference to the file in my App.tsx page.
+
+From there, it's a matter of figuring out how to call the endpoint properly in the code.
